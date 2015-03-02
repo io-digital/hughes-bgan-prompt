@@ -11,7 +11,7 @@
     "clean": "rm -rf lib && mv src lib",
     "prepublish": "npm run build",
     "postpublish": "npm run clean",
-    "publish": "npm run lint && npm test && npm publish"
+    "release": "npm run lint && npm test && npm publish"
   },
   "author": "Author <author@io.co.za>",
   "license": "MIT",
