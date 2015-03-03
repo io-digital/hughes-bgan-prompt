@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var client, rlsc = require('rl-socket-client');
+
+client = new rlsc({
+  prompt: 'bgan> ',
+  connect: true,
+  host: process.argv[2] || process.env.BGAN_HOST || '192.168.128.100',
+  port: process.argv[3] || process.env.BGAN_PORT || 1829,
+  completions: [
+    'at ??', 'at e', 'at +cgmi', 'at +cgmm', 'at +cgmn',
+    'at +cgmp', 'at +cgmr', 'at +cgms', 'at +cgsn', 'at +cimi',
+    'at +cpas', 'at +cfun', 'at +cbc', 'at +cmee', 'at +cscs',
+    'at +cnum', 'at +creg', 'at +cops', 'at +cpol', 'at +cpls',
+    'at +clck', 'at +cpwd', 'at +ccug', 'at +clcc', 'at +cusd',
+    'at +cpin', 'at +cind', 'at +cpbs', 'at +cpbr', 'at +cpbw',
+    'at +crsm', 'at +cmar', 'at +csms', 'at +cpms', 'at +cmgf',
+    'at +csca', 'at +csmp', 'at +csdh', 'at +cscb', 'at +csas',
+    'at +cres', 'at +cgdcont', 'at +cgdscont', 'at +cgactt',
+    'at +cgact', 'at +cgcmod', 'at +cgdata', 'at +cgpaddr',
+    'at +cgclass', 'at +cgreg', 'at +cgsms', 'at _iclck',
+    'at _icpwd', 'at _ipoint', 'at _igps', 'at _inis', 'at _ilog',
+    'at _isleep', 'at _isig', 'at _ibalarm', 'at _isatinfo',
+    'at _isatvis', 'at _isatcur', 'at _ibnotify', 'at _igetfw',
+    'at _iupdfw', 'at _isendfile', 'at _igetfile', 'at _iupdcfg',
+    'at _iremweb', 'at _iatcscn', 'at _iatcrobst', 'at _ihinit',
+    'at _ihip', 'at _ihstatus', 'at _ihset', 'at _ihdefcnt',
+    'at _ihaca', 'at _ihtm', 'at _ihtxcw', 'at _ihstxcw',
+    'at _ihtxmod', 'at _ihstxmod', 'at _ihgfacq', 'at _ihsigacq',
+    'at _ihgps', 'at _ihreboot', 'at _ihccal', 'at _ihswupg',
+    'at _ihswdata', 'at _ihlog', 'at _ihpin', 'at _ihpacket',
+    'at _ihsms', 'at _ihtimer', 'at _iharp', 'at _ihcircuit',
+    'at _ihread', 'at _ihgf', 'at _ihbeam', 'at _ihpbit',
+    'at _ihtemp'
+  ]
+});
